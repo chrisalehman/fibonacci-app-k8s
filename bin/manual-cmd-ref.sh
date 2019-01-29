@@ -77,3 +77,5 @@
 #
 #  a) create issuer - see file in k8s directory
 #  b) craete certificte - see file in k8s directory
+#  c) update ingress-service.yml
+#  d) commit and push to github
