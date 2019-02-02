@@ -55,3 +55,27 @@
 #
 #   a) from google cloud shell
 # helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
+
+# 5. purchase and configure domain name 'fibonacci-app-k8s'
+#
+#  a) go to domains.google.com
+#  b) purchase
+#  c) to do DNS section
+#  d) configure A record: @	A	1h	IP of externally accessible ingress controller IP address
+#  e) configure CNAME record: www	CNAME	1h 	fibonacci-app-k8.com.
+
+# 6. install cert manager
+#
+#  a) go to github.com/jetstack/cert-manager
+#  b) find getting started link - installing cert-manager w/ helm
+#  c) navigate back to google cloud shell
+# kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.6/deploy/manifests/00-crds.yaml
+# helm repo update
+# helm install --name cert-manager --namespace cert-manager --version v0.6.0 stable/cert-manager
+
+# 7. obtain tls certificate from cert-manager and install
+#
+#  a) create issuer - see file in k8s directory
+#  b) craete certificte - see file in k8s directory
+#  c) update ingress-service.yml
+#  d) commit and push to github
