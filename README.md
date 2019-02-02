@@ -4,7 +4,7 @@ Multi-container Docker application developed as part of "Docker and Kubernetes: 
 Underlying stack based on React, Express, Redis and PostgreSQL. TravisCI builds and pushes Docker images to Docker Hub, then deploys application to Google Kubernetes Engine (GKE).
 
 Prerequisites in Google Cloud:
-1. Encrypt Travid CI GCP credentials
+1. Encrypt Travis CI GCP credentials
 2. Encrypt PostgreSQL credentials
 3. Install helm + tiller for simplifying package installation on kubernetes (like yum/brew/apt)
 4. Install ingress controller using helm/tiller
